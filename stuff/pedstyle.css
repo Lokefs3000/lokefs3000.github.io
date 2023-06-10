@@ -1,0 +1,94 @@
+#diagram_container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    transition: filter 100ms;
+}
+
+.diagram_element {
+    background: none;
+    position: absolute;
+}
+
+.diagram_element_int {
+    background-color: white;
+    border: 5px gray solid;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: none;
+    top: 0px;
+    left: 0px;
+    transition: box-shadow 200ms, left 200ms, top 200ms;
+    height: 100%;
+    width: 100%;
+}
+
+.diagram_element_int:hover {
+    left: -5px;
+    top: -10px;
+    cursor: pointer;
+    box-shadow: 5px 10px black;
+}
+
+.diagram_container_text {
+    color: black;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.center_middle {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.diagram_line {
+    background-color: white;
+    border: none;
+}
+
+#viewer {
+    background-color: white;
+    border: 15px gray solid;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    transition: transform 600ms cubic-bezier(.35,.37,.1,1.41), left 600ms cubic-bezier(.35,.37,.1,1.41);
+    width: 40%;
+    height: 30%;
+}
+
+.antiexist {
+    transform: translate(50%, -50%);
+    left: -100%;
+}
+
+.exist {
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+
+#close {
+    position: absolute;
+    bottom: 5%;
+    width: 30%;
+    height: 3%;
+}
+
+.diagram_buttondef {
+    background-color: white;
+    border: 5px gray solid;
+    border-radius: 10px;
+    box-shadow: none;
+    transition: border 200ms;
+    height: 100%;
+    width: 100%;
+    transition: transform 600ms cubic-bezier(.35,.37,.1,1.41), left 600ms cubic-bezier(.35,.37,.1,1.41);
+}
+
+.diagram_buttondef:hover {
+    cursor: pointer;
+}

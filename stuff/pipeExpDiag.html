@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <link href="../style.css" rel="stylesheet">
+    <link href="pedstyle.css" rel="stylesheet">
+
+    <script src="pedcode.js"></script>
+</head>
+<body onload="createLines();">
+    <div id="diagram_container" style="z-index: 1;">
+        <div class="diagram_element center_middle" style="height: 5%; width: 70%; top: 5%;" id="1">
+            <div class="diagram_element_int">
+                <p class="diagram_container_text">Triangle vertices in</p>
+            </div>
+        </div>
+        <div class="diagram_element center_middle" style="height: 5%; width: 70%; top: 90%;"id="2">
+            <div class="diagram_element_int">
+                <p class="diagram_container_text">Screen pixels out</p>
+            </div>
+        </div>
+        <div class="diagram_element center_middle" style="height: 3%; width: 20%; top: 16%;"id="3">
+            <div class="diagram_element_int">
+                <p class="diagram_container_text">Transform w/Matrices</p>
+            </div>
+        </div>
+        <div class="diagram_element center_middle" style="height: 3%; width: 10%; top: 23%; left: 45%;"id="4">
+            <div class="diagram_element_int">
+                <p class="diagram_container_text">Modify vertices</p>
+            </div>
+        </div>
+        <div class="diagram_element center_middle" style="height: 3%; width: 10%; top: 30%; left: 45%;"id="5">
+            <div class="diagram_element_int">
+                <p class="diagram_container_text">Project vertices</p>
+            </div>
+        </div>
+        <div class="diagram_element center_middle" style="height: 3%; width: 30%; top: 40%;"id="6">
+            <div class="diagram_element_int">
+                <p class="diagram_container_text">Rasterize vertices as traingles</p>
+            </div>
+        </div>
+        <div class="diagram_element center_middle" style="height: 3%; width: 18%; top: 47%; left: 44%;"id="7">
+            <div class="diagram_element_int">
+                <p class="diagram_container_text">Calculate barycentric coordinates</p>
+            </div>
+        </div>
+        <div class="diagram_element center_middle" style="height: 3%; width: 18%; top: 54%; left: 44%;"id="8">
+            <div class="diagram_element_int">
+                <p class="diagram_container_text">Shade w/Texture</p>
+            </div>
+        </div>
+        <div class="diagram_element center_middle" style="height: 3%; width: 18%; top: 61%; left: 44%;"id="9">
+            <div class="diagram_element_int">
+                <p class="diagram_container_text">Place pixel at coord</p>
+            </div>
+        </div>
+    </div>
+
+    <iframe id="viewer" style="z-index: 5;" class="antiexist" src="diagrams/1.html"></iframe>
+    <button id="close" onclick="closePanel();" style="z-index: 8;" class="diagram_buttondef antiexist">Close</button>
+</body>
+</html>
