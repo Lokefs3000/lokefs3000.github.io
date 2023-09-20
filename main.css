@@ -1,0 +1,131 @@
+body, html {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(22, 22, 22);
+
+    --font-family: 'Roboto', sans-serif;
+    font-family: 'vcr_osd_mono', sans-serif;
+    color: white;
+
+    cursor: none;
+
+    overflow: hidden;
+
+    --cursor_normal: url("assets/cursor_normal.png");
+}
+
+@font-face {
+    font-family: vcr_osd_mono;
+    src: url("assets/vcr_osd_mono.ttf");
+}
+
+button, a {
+    color: white;
+    cursor: none;
+    --font-family: 'Roboto', sans-serif;
+    font-family: 'vcr_osd_mono', sans-serif;
+}
+
+button:hover, a:hover {
+    cursor: none;
+}
+
+#cursor_main {
+    position: absolute;
+    z-index: 99;
+
+    background-image: var(--cursor_normal);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    image-rendering: pixelated;
+
+    width: 32px;
+    height: 32px;
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+}
+
+#menuline {
+    position: absolute;
+
+    width: 100%;
+    height: 10%;
+    min-height: 21px;
+    max-height: 80px;
+
+    background: linear-gradient(#ffffff0b 60%, #ffffff00);
+}
+
+#logotop {
+    background-image: url("assets/static_effect.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+
+    position: relative;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-80%);
+
+    height: 40%;
+    aspect-ratio: 95 / 13;
+}
+
+#menuoptions {
+    position: absolute;
+    top: 15%;
+    left: 20px;
+
+    width: 20%;
+    height: 85%;
+}
+
+.menuoption {
+    background: none;
+    border: none;
+
+    position: relative;
+    left: 0%;
+
+    font-size: 6vh;
+    text-align: left;
+
+    width: 100%;
+    height: 5%;
+
+    margin-bottom: 5%;
+
+    transition: text-shadow 300ms, left 300ms;
+}
+
+.menuoption:hover {
+    text-shadow: rgb(255, 255, 255) 0px 0 20px;
+    left: 8%;
+}
+
+.menuoption_sel {
+    text-shadow: rgb(255, 255, 255) 0px 0 20px;
+    left: 8%;
+}
+
+#page {
+    position: absolute;
+    top: 15%;
+    left: calc(20px + 22%);
+
+    width: calc(100% - (20px + 23%));
+    height: 85%;
+}
+
+#pageframe {
+    border: none;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+}
