@@ -7,11 +7,10 @@ body, html {
     font-family: 'vcr_osd_mono', sans-serif;
     color: white;
 
-    cursor: none;
-
-    overflow: hidden;
-
     --cursor_normal: url("assets/cursor_normal.png");
+    --cursor_active: url("assets/cursor_active.png");
+
+    cursor: var(--cursor_normal), auto;
 }
 
 @font-face {
@@ -21,13 +20,13 @@ body, html {
 
 button, a {
     color: white;
-    cursor: none;
+    cursor: var(--cursor_normal), auto;
     --font-family: 'Roboto', sans-serif;
     font-family: 'vcr_osd_mono', sans-serif;
 }
 
 button:hover, a:hover {
-    cursor: none;
+    cursor: var(--cursor_normal), auto;
 }
 
 #cursor_main {
@@ -126,6 +125,8 @@ button:hover, a:hover {
 
     width: 100%;
     height: 100%;
+}
 
-    pointer-events: none;
+.retro1_screenshot_hover:hover {
+    cursor: var(--cursor_active), auto;
 }
