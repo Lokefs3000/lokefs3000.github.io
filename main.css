@@ -90,13 +90,13 @@ button:hover, a:hover {
     position: relative;
     left: 0%;
 
-    font-size: 6vh;
+    font-size: 5vw;
     text-align: left;
 
     width: 100%;
     height: 5%;
 
-    margin-bottom: 5%;
+    padding-bottom: 7vw;
 
     transition: text-shadow 300ms, left 300ms;
 }
