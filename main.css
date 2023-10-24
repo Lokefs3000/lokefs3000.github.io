@@ -9,8 +9,6 @@ body, html {
 
     --cursor_normal: url("assets/cursor_normal.png");
     --cursor_active: url("assets/cursor_active.png");
-
-    cursor: var(--cursor_normal), auto;
 }
 
 @font-face {
@@ -18,115 +16,93 @@ body, html {
     src: url("assets/vcr_osd_mono.ttf");
 }
 
-button, a {
+button {
     color: white;
-    cursor: var(--cursor_normal), auto;
-    --font-family: 'Roboto', sans-serif;
     font-family: 'vcr_osd_mono', sans-serif;
 }
 
-button:hover, a:hover {
-    cursor: var(--cursor_normal), auto;
+button:hover {
+    cursor: pointer;
 }
 
-#cursor_main {
+#menu {
     position: absolute;
-    z-index: 99;
-
-    background-image: var(--cursor_normal);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-
-    image-rendering: pixelated;
-
-    width: 32px;
-    height: 32px;
-    transform: translate(-50%, -50%);
-
-    pointer-events: none;
-}
-
-#menuline {
-    position: absolute;
-
+    bottom: 0px;
     width: 100%;
-    height: 10%;
-    min-height: 21px;
-    max-height: 80px;
-
-    background: linear-gradient(#ffffff0b 60%, #ffffff00);
-}
-
-#logotop {
-    background-image: url("assets/static_effect.png");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    image-rendering: pixelated;
-
-    position: relative;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-80%);
-
-    height: 40%;
-    aspect-ratio: 95 / 13;
-}
-
-#menuoptions {
-    position: absolute;
-    top: 15%;
-    left: 20px;
-
-    width: 20%;
-    height: 85%;
+    height: 7%;
+    max-height: 53px;
+    background-color: rgba(255, 255, 255, 0.048);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1%;
+    z-index: 2;
 }
 
 .menuoption {
     background: none;
     border: none;
+    font-size: 5vh;
+    transform: translateY(-0%);
+    height: 100%;
 
-    position: relative;
-    left: 0%;
-
-    font-size: 5vw;
-    text-align: left;
-
-    width: 100%;
-    height: 5%;
-
-    padding-bottom: 7vw;
-
-    transition: text-shadow 300ms, left 300ms;
+    transition: transform 150ms, height 150ms, text-shadow 150ms;
 }
 
 .menuoption:hover {
-    text-shadow: rgb(255, 255, 255) 0px 0 20px;
-    left: 8%;
+    transform: translateY(-50%);
+    height: 200%;
+    text-shadow: #fff 1px 0 10px;
 }
 
-.menuoption_sel {
-    text-shadow: rgb(255, 255, 255) 0px 0 20px;
-    left: 8%;
-}
-
-#page {
+#games {
+    width: 90%;
+    height: 80%;
     position: absolute;
-    top: 15%;
-    left: calc(20px + 22%);
-
-    width: calc(100% - (20px + 23%));
-    height: 85%;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
 }
 
-#pageframe {
-    border: none;
-
+.gsection {
     width: 100%;
-    height: 100%;
+    height: fit-content;
+    position: relative;
+    left: 5%;
 }
 
-.retro1_screenshot_hover:hover {
-    cursor: var(--cursor_active), auto;
+.gheader {
+    font-size: 6vh;
+}
+
+.goption {
+    position: relative;
+    background: none;
+    border: none;
+    font-size: 3.5vh;
+    transform: translateY(-0%);
+    width: 100%;
+    text-align: left;
+
+    transition: transform 150ms, height 150ms, text-shadow 150ms;
+}
+
+.goption:hover {
+    transform: translateX(2%);
+    text-shadow: #fff 1px 0 10px;
+}
+
+#main {
+    width: 95%;
+    height: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 47%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    height: 91%;
+}
+
+.screenshot {
+    width: 100%;
+    padding-bottom: 4vh;
 }

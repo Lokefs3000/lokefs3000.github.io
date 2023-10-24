@@ -7,21 +7,13 @@
 
         <link href="main.css" rel="stylesheet">
 
-        <script src="js/effects.js"></script>
-        <script src="js/main.js"></script>
+        <script src="main.js"></script>
     </head>
-    <body onload="loadEffect(); loadMain();" style="overflow: hidden;">
-        <div id="menuline">
-            <div id="logotop"></div>
-        </div>
-        <div id="menuoptions">
-            <button class="menuoption" id="home">Home</button>
-            <button class="menuoption" id="about">About</button>
-            <div class="padding" style="margin-bottom: 10%;"></div>
-            <button class="menuoption" id="retro1">Retro1</button>
-        </div>
-        <div id="page">
-            <iframe id="pageframe"></iframe>
+    <body style="overflow: hidden;">
+        <div id="menu">
+            <button class="menuoption" onclick="transport('index');">Home</button>
+            <button class="menuoption" onclick="transport('about');">About</button>
+            <button class="menuoption" onclick="transport('games');">Games</button>
         </div>
     </body>
 </html>
